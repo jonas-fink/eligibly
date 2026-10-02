@@ -1,0 +1,11 @@
+node_modules
+dist
+dist-ssr
+*.local
+.env
+logs
+*.log
+.DS_Store
+coverage
+*.tsbuildinfo
+apps/web/src/locales/.DS_Store

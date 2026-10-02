@@ -1,0 +1,134 @@
+{
+  "appName": "EligibilityCheck",
+  "disclaimer": "Das ist eine unverbindliche Einschätzung, keine Rechtsberatung und kein Bescheid. Maßgeblich ist allein die jeweilige Rechtsnorm.",
+  "footer": {
+    "datenquellen": "Datenquellen",
+    "konto": "Konto",
+    "sessionHinweis": "Ohne Anmeldung bleiben deine Angaben nur in diesem Tab."
+  },
+  "start": {
+    "titel": "Ob sich ein Antrag lohnt — bevor du zum Amt gehst.",
+    "text": "Wir prüfen acht Hilfesysteme anhand deiner Angaben. Die Berechnung läuft auf dem Server und speichert nichts, solange du kein Konto anlegst.",
+    "starten": "Prüfung starten"
+  },
+  "wizard": {
+    "weiter": "Weiter",
+    "zurueck": "Zurück",
+    "pruefen": "Jetzt prüfen",
+    "schritt1": "Haushalt",
+    "schritt2": "Leistungen",
+    "schritt3": "Zusatzfragen",
+    "schritt4": "Ergebnis",
+    "gruppeHinweis": "Diese Leistungen hängen zusammen — wir prüfen sie gemeinsam, damit das Ergebnis stimmt.",
+    "plz": "Postleitzahl",
+    "wohnort": "Wohnort",
+    "bundesland": "Bundesland",
+    "wohnverhaeltnis": "Wohnverhältnis",
+    "miete": "Miete",
+    "eigentum": "Eigentum",
+    "kaltmiete": "Kaltmiete / Belastung (€ / Monat)",
+    "nebenkosten": "Nebenkosten (€ / Monat)",
+    "heizkosten": "Heizkosten (€ / Monat)",
+    "wohnflaeche": "Wohnfläche (m²)",
+    "geburtsdatum": "Geburtsdatum",
+    "erwerb": "Hauptsächliche Tätigkeit",
+    "brutto": "Bruttoeinkommen (€ / Monat)",
+    "netto": "Nettoeinkommen (€ / Monat)",
+    "kindHinzufuegen": "Kind im Haushalt",
+    "kindGeburtsdatum": "Geburtsdatum des Kindes",
+    "kindergeld": "Für dieses Kind wird Kindergeld bezogen",
+    "session": "Deine Angaben liegen nur in diesem Browser-Tab, nicht auf dem Server."
+  },
+  "systeme": {
+    "grundsicherung": "Grundsicherung (SGB XII)",
+    "wohngeld": "Wohngeld",
+    "kinderzuschlag": "Kinderzuschlag",
+    "buergergeld": "Neue Grundsicherung",
+    "bafoeg": "BAföG",
+    "elterngeld": "Elterngeld",
+    "unterhaltsvorschuss": "Unterhaltsvorschuss",
+    "wbs": "Wohnberechtigungsschein"
+  },
+  "elterngeld": {
+    "nettoVorGeburt": "Netto vor der Geburt (€ / Monat, Schnitt 12 Monate)",
+    "zvE": "Zu versteuerndes Einkommen im Vorjahr (€)",
+    "stunden": "Wochenstunden während des Bezugs",
+    "variante": "Variante",
+    "basis": "Basiselterngeld",
+    "plus": "ElterngeldPlus"
+  },
+  "kinderzuschlag": {
+    "kindEinkommen": "Eigenes Einkommen des Kindes, zum Beispiel Unterhalt oder Ausbildungsvergütung (€ / Monat)"
+  },
+  "unterhaltsvorschuss": {
+    "keinUnterhalt": "Der andere Elternteil zahlt keinen oder nur unzureichenden Unterhalt",
+    "unbekannt": "Der andere Elternteil ist unbekannt oder verstorben"
+  },
+  "wohngeld": {
+    "gemeinde": "Gemeinde",
+    "gemeindePlatzhalter": "Bitte wählen",
+    "gemeindeWaehlen": "Zu deiner Postleitzahl gehören mehrere Gemeinden mit unterschiedlicher Mietstufe — bitte wähle deine Gemeinde.",
+    "keineGemeinde": "Für diese Postleitzahl ist keine Gemeinde hinterlegt.",
+    "gemeindeFehler": "Gemeinden konnten nicht geladen werden.",
+    "zinsTilgung": "Zinsen und Tilgung (€ / Monat)",
+    "grundsteuer": "Grundsteuer (€ / Jahr)"
+  },
+  "status": {
+    "ja": "Anspruch wahrscheinlich",
+    "nein": "Kein Anspruch",
+    "vielleicht": "Grenzbereich — Prüfung lohnt sich",
+    "nachrangig": "Andere Leistung greift vorrangig",
+    "nicht_pruefbar": "Hier nicht beurteilbar"
+  },
+  "report": {
+    "titel": "Dein Ergebnis",
+    "naechsterSchritt": "Nächster Schritt",
+    "stichtag": "Gerechnet für {{monat}}, mit deinen Angaben als Monatswerten.",
+    "veraltet": "Diese Berechnung beruht auf einem Rechtsstand, der für den Stichtag nicht mehr gilt. Bitte prüfe die Werte beim Amt.",
+    "auchGeprueft": "Auch geprüft",
+    "nichtAusgewaehlt": "Das hattest du nicht ausgewählt — könnte trotzdem passen",
+    "monatlich": "im Monat",
+    "keineGeldleistung": "Keine Geldleistung — eine Berechtigung.",
+    "laden": "Wir rechnen. Das dauert einen Moment.",
+    "fehler": "Die Prüfung ist fehlgeschlagen. Bitte später erneut versuchen.",
+    "speichern": "Haushalt speichern",
+    "einwilligung": "Ich willige ein, dass dieser Haushalt in meinem Konto gespeichert wird.",
+    "gespeichert": "Gespeichert. Du findest ihn unter Konto.",
+    "speichernLogin": "Zum Speichern brauchst du ein Konto.",
+    "speichernEmail": "Speichern geht erst, wenn die E-Mail-Adresse bestätigt ist.",
+    "zumKonto": "Zum Konto"
+  },
+  "datenquellen": {
+    "titel": "Datenquellen",
+    "rechtsstand": "Berechnungen nutzen den Rechtsstand der hinterlegten Konstanten-Sets (aktuell 2026-01).",
+    "mietstufen": "Mietenstufen: Bundesministerium für Wohnen, Stadtentwicklung und Bauwesen, Anlage zur Wohngeldverordnung, Stand 1. Januar 2023 — amtliches Werk (§ 5 UrhG).",
+    "openplz": "Postleitzahlen und Gemeindezuordnung: OpenPLZ API, © OpenStreetMap-Mitwirkende und Statistisches Bundesamt (Destatis), lizenziert unter ODbL 1.0. Die in dieser Anwendung verwendeten abgeleiteten Datensätze stehen ebenfalls unter ODbL 1.0 und sind in diesem öffentlichen Repository abrufbar.",
+    "linkOpenplz": "OpenPLZ API",
+    "linkOdbl": "ODbL 1.0"
+  },
+  "konto": {
+    "titel": "Konto",
+    "text": "Die Prüfung selbst braucht kein Konto. Mit einem Konto kannst du einen Haushalt speichern, nachdem die E-Mail-Adresse bestätigt ist.",
+    "email": "E-Mail",
+    "passwort": "Passwort (mindestens 12 Zeichen)",
+    "registrieren": "Konto anlegen",
+    "anmelden": "Anmelden",
+    "abmelden": "Abmelden",
+    "vergessen": "Passwort vergessen",
+    "vergessenHinweis": "Wenn ein Konto zu dieser Adresse existiert, liegt der Link zum Zurücksetzen im nächsten Schritt bereit.",
+    "neuesPasswort": "Neues Passwort",
+    "zuruecksetzen": "Passwort setzen",
+    "bestaetigt": "E-Mail-Adresse bestätigt.",
+    "unbestaetigt": "E-Mail noch nicht bestätigt. Der Link liegt im Postfach.",
+    "erneutSenden": "Bestätigung erneut senden",
+    "erneutGesendet": "Wenn der Versand eingerichtet ist, liegt der neue Link in deinem Postfach.",
+    "haushalte": "Gespeicherte Haushalte",
+    "keineHaushalte": "Noch kein Haushalt gespeichert.",
+    "loeschen": "Löschen",
+    "kontoLoeschen": "Konto und alle Haushalte unwiderruflich löschen",
+    "loeschungFragen": "Konto und alle gespeicherten Haushalte werden gelöscht. Das lässt sich nicht rückgängig machen.",
+    "loeschungAbbrechen": "Abbrechen",
+    "loeschungBestaetigen": "Endgültig löschen",
+    "fehler": "Das hat nicht geklappt. Bitte die Angaben prüfen."
+  }
+}

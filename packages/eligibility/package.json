@@ -1,0 +1,29 @@
+{
+  "name": "@eligibility/eligibility",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsc -b",
+    "typecheck": "tsc -b --pretty",
+    "test": "vitest run",
+    "rechtsstand-check": "node dist/constants/rechtsstand-check.js"
+  },
+  "dependencies": {
+    "@eligibility/shared": "*",
+    "decimal.js": "^10.6.0"
+  },
+  "devDependencies": {
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2",
+    "vitest": "^3.2.4"
+  }
+}

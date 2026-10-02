@@ -1,0 +1,58 @@
+{
+ "_hinweis": "Gemeinden auf Inseln ohne Festlandanschluss. Für sie gilt nach der Anlage zur Wohngeldverordnung die gemeinsame Mietenstufe V — unabhängig von der Einstufung ihres Kreises. Ohne diese Liste erben sie den ländlichen Kreiswert, bei den ostfriesischen Inseln und Föhr/Amrum ist das Mietstufe I statt V.",
+ "_geprueft": "2026-09-07",
+ "_quelle": "Anlage zur Wohngeldverordnung, Block 'Gemeinsame Mietenstufe' am Ende des BMWSB-PDF; Gemeindeschlüssel gegen data/plz-gemeinden.csv verifiziert",
+ "_vorbehalt": "Welche Insel als 'ohne Festlandanschluss' gilt, entscheidet die Wohngeldbehörde. Diese Liste bildet den Stand der Recherche ab und ist vor dem Livegang fachlich abzunehmen. Die Abgrenzungsfälle sind unter _abgegrenzt einzeln begründet.",
+ "mietstufe": 5,
+ "gemeinden": {
+  "03457002": { "name": "Borkum, Stadt",                "kreis": "Leer",                "gruppe": "Ostfriesische Inseln" },
+  "03452013": { "name": "Juist, Inselgemeinde",         "kreis": "Aurich",              "gruppe": "Ostfriesische Inseln" },
+  "03452020": { "name": "Norderney, Stadt",             "kreis": "Aurich",              "gruppe": "Ostfriesische Inseln" },
+  "03452002": { "name": "Baltrum",                      "kreis": "Aurich",              "gruppe": "Ostfriesische Inseln" },
+  "03462007": { "name": "Langeoog",                     "kreis": "Wittmund",            "gruppe": "Ostfriesische Inseln" },
+  "03462014": { "name": "Spiekeroog",                   "kreis": "Wittmund",            "gruppe": "Ostfriesische Inseln" },
+  "03455021": { "name": "Wangerooge, Nordseebad",       "kreis": "Friesland",           "gruppe": "Ostfriesische Inseln" },
+
+  "01054005": { "name": "Alkersum",                     "kreis": "Nordfriesland",       "gruppe": "Föhr" },
+  "01054015": { "name": "Borgsum",                      "kreis": "Nordfriesland",       "gruppe": "Föhr" },
+  "01054025": { "name": "Dunsum",                       "kreis": "Nordfriesland",       "gruppe": "Föhr" },
+  "01054083": { "name": "Midlum",                       "kreis": "Nordfriesland",       "gruppe": "Föhr" },
+  "01054087": { "name": "Nieblum",                      "kreis": "Nordfriesland",       "gruppe": "Föhr" },
+  "01054094": { "name": "Oevenum",                      "kreis": "Nordfriesland",       "gruppe": "Föhr" },
+  "01054098": { "name": "Oldsum",                       "kreis": "Nordfriesland",       "gruppe": "Föhr" },
+  "01054129": { "name": "Süderende",                    "kreis": "Nordfriesland",       "gruppe": "Föhr" },
+  "01054143": { "name": "Utersum",                      "kreis": "Nordfriesland",       "gruppe": "Föhr" },
+  "01054158": { "name": "Witsum",                       "kreis": "Nordfriesland",       "gruppe": "Föhr" },
+  "01054163": { "name": "Wrixum",                       "kreis": "Nordfriesland",       "gruppe": "Föhr" },
+  "01054164": { "name": "Wyk auf Föhr, Stadt",          "kreis": "Nordfriesland",       "gruppe": "Föhr" },
+
+  "01054085": { "name": "Nebel",                        "kreis": "Nordfriesland",       "gruppe": "Amrum" },
+  "01054089": { "name": "Norddorf auf Amrum",           "kreis": "Nordfriesland",       "gruppe": "Amrum" },
+  "01054160": { "name": "Wittdün auf Amrum",            "kreis": "Nordfriesland",       "gruppe": "Amrum" },
+
+  "01054050": { "name": "Hallig Hooge",                 "kreis": "Nordfriesland",       "gruppe": "Halligen und Pellworm" },
+  "01054074": { "name": "Langeneß",                     "kreis": "Nordfriesland",       "gruppe": "Halligen und Pellworm" },
+  "01054103": { "name": "Pellworm",                     "kreis": "Nordfriesland",       "gruppe": "Halligen und Pellworm" },
+
+  "01054046": { "name": "Hörnum (Sylt)",                "kreis": "Nordfriesland",       "gruppe": "Sylt" },
+  "01054061": { "name": "Kampen (Sylt)",                "kreis": "Nordfriesland",       "gruppe": "Sylt" },
+  "01054078": { "name": "List auf Sylt",                "kreis": "Nordfriesland",       "gruppe": "Sylt" },
+  "01054149": { "name": "Wenningstedt-Braderup (Sylt)", "kreis": "Nordfriesland",       "gruppe": "Sylt" },
+  "01054168": { "name": "Sylt",                         "kreis": "Nordfriesland",       "gruppe": "Sylt" },
+
+  "01056025": { "name": "Helgoland",                    "kreis": "Pinneberg",           "gruppe": "Helgoland" },
+
+  "13073040": { "name": "Insel Hiddensee, Seebad",      "kreis": "Vorpommern-Rügen",    "gruppe": "Ostsee" }
+ },
+ "_abgegrenzt": {
+  "01054091": { "name": "Nordstrand",           "grund": "über einen Damm mit dem Festland verbunden — kein Fall der Regel" },
+  "13074035": { "name": "Insel Poel, Ostseebad", "grund": "über einen Damm mit dem Festland verbunden" },
+  "01055046": { "name": "Fehmarn, Stadt",        "grund": "über die Fehmarnsundbrücke verbunden; zudem eigener PDF-Eintrag mit Mietstufe III" },
+  "_ruegen_usedom": { "grund": "Rügen und Usedom sind über Brücken erreichbar; ihre Gemeinden fallen nicht unter die Regel" },
+  "_oland_nordstrandischmoor": { "grund": "keine eigenen Gemeinden — Hallig Oland gehört zu Langeneß, Nordstrandischmoor zu Pellworm; über diese abgedeckt" },
+  "_neuwerk": { "grund": "keine eigene Gemeinde, gehört zur Freien und Hansestadt Hamburg" }
+ },
+ "_bekannte_luecke": {
+  "01054039": { "name": "Gröde (Hallig)", "grund": "nicht im OpenPLZ-Datensatz enthalten — die Hallig hat rund neun Einwohner und offenbar keinen eigenen Orts-Eintrag. Ohne Eintrag im PLZ-Datensatz kann das Modul sie nicht auflösen; sie liefert nicht_pruefbar." }
+ }
+}

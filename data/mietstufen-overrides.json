@@ -1,0 +1,334 @@
+{
+ "_hinweis": "Manuell geprüfte Zuordnung PDF-Eintrag -> amtlicher Gemeindeschlüssel. Nötig, wo BMWSB-PDF und amtliches Verzeichnis nicht automatisch zusammenfinden: Abkürzungen, sorbische Doppelnamen, Namensänderungen und Tippfehler im PDF. Jede Zeile wurde einzeln gegen den PLZ-Datensatz geprüft. Diese Liste hat Vorrang vor allen automatischen Durchgängen.",
+ "_geprueft": "2026-09-07",
+ "_felder": "eintraege: ags -> { pdfName, amtlich, grund } | kreise: amtlicher Kreisschluessel -> { pdfName, amtlich, grund }",
+ "eintraege": {
+  "08326052": {
+   "pdfName": "St. Georgen i. Schwarzwald, Stadt.",
+   "amtlich": "St. Georgen im Schwarzwald, Stadt",
+   "grund": "Abkuerzung"
+  },
+  "08215066": {
+   "pdfName": "Phillipsburg, Stadt",
+   "amtlich": "Philippsburg, Stadt",
+   "grund": "Tippfehler im PDF"
+  },
+  "08215100": {
+   "pdfName": "Bad Schönbohm",
+   "amtlich": "Bad Schönborn",
+   "grund": "Tippfehler im PDF"
+  },
+  "08315074": {
+   "pdfName": "Müllheim, Stadt",
+   "amtlich": "Müllheim im Markgräflerland, Stadt",
+   "grund": "Namenszusatz nur amtlich"
+  },
+  "09671111": {
+   "pdfName": "Alzenau i. Ufr., Stadt",
+   "amtlich": "Alzenau, St",
+   "grund": "Zusatz nur im PDF"
+  },
+  "09181114": {
+   "pdfName": "Dießen a. Ammersee, Markt",
+   "amtlich": "Dießen am Ammersee, M",
+   "grund": "Abkuerzung"
+  },
+  "09676122": {
+   "pdfName": "Erlenbach am Main, Stadt",
+   "amtlich": "Erlenbach a.Main, St",
+   "grund": "Abkuerzung"
+  },
+  "09184119": {
+   "pdfName": "Garching bei München, Stadt",
+   "amtlich": "Garching b.München, St",
+   "grund": "Abkuerzung"
+  },
+  "09677131": {
+   "pdfName": "Gemünden am Main, Stadt",
+   "amtlich": "Gemünden a.Main, St",
+   "grund": "Abkuerzung"
+  },
+  "09175122": {
+   "pdfName": "Grafing bei München, Stadt",
+   "amtlich": "Grafing b.München, St",
+   "grund": "Abkuerzung"
+  },
+  "09184127": {
+   "pdfName": "Höhenkirchen-Sieg.",
+   "amtlich": "Höhenkirchen-Siegertsbrunn",
+   "grund": "Abkuerzung im PDF"
+  },
+  "09184131": {
+   "pdfName": "Kirchheim bei München",
+   "amtlich": "Kirchheim b.München",
+   "grund": "Abkuerzung"
+  },
+  "09774150": {
+   "pdfName": "Krumbach (Schwaben), Stadt",
+   "amtlich": "Krumbach (Schwaben), St",
+   "grund": "Abkuerzung"
+  },
+  "09279122": {
+   "pdfName": "Landau an der Isar, Stadt",
+   "amtlich": "Landau a.d.Isar, St",
+   "grund": "Abkuerzung"
+  },
+  "09181130": {
+   "pdfName": "Landsberg a. Lech, Stadt",
+   "amtlich": "Landsberg am Lech, GKSt",
+   "grund": "Abkuerzung"
+  },
+  "09773144": {
+   "pdfName": "Lauingen (Donau), Stadt",
+   "amtlich": "Lauingen (Donau), St",
+   "grund": "Abkuerzung"
+  },
+  "09776116": {
+   "pdfName": "Lindau (Bodensee), Stadt",
+   "amtlich": "Lindau (Bodensee), GKSt",
+   "grund": "Abkuerzung"
+  },
+  "09677155": {
+   "pdfName": "Lohr am Main, Stadt",
+   "amtlich": "Lohr a.Main, St",
+   "grund": "Abkuerzung"
+  },
+  "09178143": {
+   "pdfName": "Moosburg an der Isar, Stadt",
+   "amtlich": "Moosburg a.d.Isar, St",
+   "grund": "Abkuerzung"
+  },
+  "09183128": {
+   "pdfName": "Mühldorf am Inn, Stadt",
+   "amtlich": "Mühldorf a.Inn, St",
+   "grund": "Abkuerzung"
+  },
+  "09180124": {
+   "pdfName": "Murnau am Staffelsee, Markt",
+   "amtlich": "Murnau a.Staffelsee, M",
+   "grund": "Abkuerzung"
+  },
+  "09185149": {
+   "pdfName": "Neuburg an der Donau, Stadt",
+   "amtlich": "Neuburg a.d.Donau, GKSt",
+   "grund": "Abkuerzung"
+  },
+  "09178145": {
+   "pdfName": "Neufahrn bei Freising",
+   "amtlich": "Neufahrn b.Freising",
+   "grund": "Abkuerzung"
+  },
+  "09575153": {
+   "pdfName": "Neustadt an der Aisch, Stadt",
+   "amtlich": "Neustadt a.d.Aisch, St",
+   "grund": "Abkuerzung"
+  },
+  "09273152": {
+   "pdfName": "Neustadt an der Donau, Stadt",
+   "amtlich": "Neustadt a.d.Donau, St",
+   "grund": "Abkuerzung"
+  },
+  "09473151": {
+   "pdfName": "Neustadt bei Coburg, Stadt",
+   "amtlich": "Neustadt b.Coburg, GKSt",
+   "grund": "Abkuerzung"
+  },
+  "09187162": {
+   "pdfName": "Prien am Chiemsee, Markt",
+   "amtlich": "Prien a.Chiemsee, M",
+   "grund": "Abkuerzung"
+  },
+  "09275154": {
+   "pdfName": "Vilshofen a. d. Donau, Stadt",
+   "amtlich": "Vilshofen an der Donau, St",
+   "grund": "Abkuerzung"
+  },
+  "09187182": {
+   "pdfName": "Wasserburg am Inn, Stadt",
+   "amtlich": "Wasserburg a.Inn, St",
+   "grund": "Abkuerzung"
+  },
+  "09363000": {
+   "pdfName": "Weiden i. d. Oberpfalz, Stadt",
+   "amtlich": "Weiden i.d.OPf.",
+   "grund": "Abkuerzung"
+  },
+  "09577177": {
+   "pdfName": "Weißenburg i. Bayern, Stadt",
+   "amtlich": "Weißenburg i.Bay., GKSt",
+   "grund": "Abkuerzung"
+  },
+  "09574112": {
+   "pdfName": "Altdorf bei Nürnberg, Stadt",
+   "amtlich": "Altdorf b.Nürnberg, St",
+   "grund": "Abkuerzung"
+  },
+  "12060005": {
+   "pdfName": "Ahrensfelde-Blumberg",
+   "amtlich": "Ahrensfelde",
+   "grund": "Namensaenderung, Blumberg ist Ortsteil"
+  },
+  "12051000": {
+   "pdfName": "Brandenburg a. d. Havel, Stadt",
+   "amtlich": "Brandenburg an der Havel, Stadt",
+   "grund": "Abkuerzung"
+  },
+  "12052000": {
+   "pdfName": "Cottbus, Stadt",
+   "amtlich": "Cottbus/Chóśebuz, Stadt",
+   "grund": "sorbischer Doppelname"
+  },
+  "12071076": {
+   "pdfName": "Forst (Lausitz), Stadt",
+   "amtlich": "Forst (Lausitz)/Baršć (Łužyca), Stadt",
+   "grund": "sorbischer Doppelname"
+  },
+  "12061316": {
+   "pdfName": "Lübben/Spreewald, Stadt",
+   "amtlich": "Lübben (Spreewald) / Lubin (Błota), Stadt",
+   "grund": "sorbischer Doppelname"
+  },
+  "12066196": {
+   "pdfName": "Lübbenau/Spreewald, Stadt",
+   "amtlich": "Lübbenau/Spreewald / Lubnjow/Błota, Stadt",
+   "grund": "sorbischer Doppelname"
+  },
+  "12066304": {
+   "pdfName": "Senftenberg, Stadt",
+   "amtlich": "Senftenberg/Zły Komorow, Stadt",
+   "grund": "sorbischer Doppelname"
+  },
+  "12071372": {
+   "pdfName": "Spremberg, Stadt",
+   "amtlich": "Spremberg/Grodk, Stadt",
+   "grund": "sorbischer Doppelname"
+  },
+  "06635002": {
+   "pdfName": "Arolsen, Stadt",
+   "amtlich": "Bad Arolsen, Stadt",
+   "grund": "Namensaenderung"
+  },
+  "06635011": {
+   "pdfName": "Frankenberg (Eder), Stadt",
+   "amtlich": "Frankenberg (Eder), Philipp-Soldan-Stadt",
+   "grund": "Namenszusatz nur amtlich"
+  },
+  "06533009": {
+   "pdfName": "Limburg an der Lahn, Stadt",
+   "amtlich": "Limburg a. d. Lahn, Kreisstadt",
+   "grund": "Abkuerzung"
+  },
+  "06433012": {
+   "pdfName": "Rüsselsheim, Stadt",
+   "amtlich": "Rüsselsheim am Main, Stadt",
+   "grund": "Namensaenderung"
+  },
+  "03353005": {
+   "pdfName": "Buchholz i. d. Nordheide, Stadt",
+   "amtlich": "Buchholz in der Nordheide, Stadt",
+   "grund": "Abkuerzung"
+  },
+  "05378016": {
+   "pdfName": "Leichlingen (Rheinland), Stadt",
+   "amtlich": "Leichlingen (Rheinland), Blütenstadt",
+   "grund": "Namenszusatz nur amtlich"
+  },
+  "05334032": {
+   "pdfName": "Stolberg (Rheinland), Kupferstadt",
+   "amtlich": "Stolberg (Rhld.), Kupferstadt",
+   "grund": "Abkuerzung"
+  },
+  "07337038": {
+   "pdfName": "Herxheim b. Landau/Pfalz",
+   "amtlich": "Herxheim bei Landau/ Pfalz",
+   "grund": "Abkuerzung"
+  },
+  "07313000": {
+   "pdfName": "Landau i. d. Pfalz, Stadt",
+   "amtlich": "Landau in der Pfalz, Stadt",
+   "grund": "Abkuerzung"
+  },
+  "14625020": {
+   "pdfName": "Bautzen, Stadt",
+   "amtlich": "Bautzen / Budyšin, Stadt, Hochschulstadt / Wysokoš",
+   "grund": "sorbischer Doppelname"
+  },
+  "14626085": {
+   "pdfName": "Ebersbach-Neugersd., Stadt",
+   "amtlich": "Ebersbach-Neugersdorf, Stadt",
+   "grund": "Abkuerzung im PDF"
+  },
+  "14522150": {
+   "pdfName": "Frankenberg/Sachsen, Stadt",
+   "amtlich": "Frankenberg/Sa., Stadt, Garnisonsstadt",
+   "grund": "Abkuerzung"
+  },
+  "14625240": {
+   "pdfName": "Hoyerswerda, Stadt",
+   "amtlich": "Hoyerswerda / Wojerecy, Stadt",
+   "grund": "sorbischer Doppelname"
+  },
+  "14625250": {
+   "pdfName": "Kamenz, Stadt",
+   "amtlich": "Kamenz / Kamjenc, Stadt",
+   "grund": "sorbischer Doppelname"
+  },
+  "14628260": {
+   "pdfName": "Neustadt i. Sa., Stadt",
+   "amtlich": "Neustadt in Sachsen, Stadt",
+   "grund": "Abkuerzung"
+  },
+  "14523300": {
+   "pdfName": "Oelsnitz/Vogtland, Stadt",
+   "amtlich": "Oelsnitz/Vogtl., Stadt",
+   "grund": "Abkuerzung"
+  },
+  "14523340": {
+   "pdfName": "Reichenbach/Vogtl., Stadt",
+   "amtlich": "Reichenbach im Vogtland, Stadt",
+   "grund": "Abkuerzung — NICHT Reichenbach/O.L. im Kreis Görlitz"
+  },
+  "16065003": {
+   "pdfName": "Bad Frankenhausen/Kyff",
+   "amtlich": "Bad Frankenhausen/Kyffhäuser, Stadt",
+   "grund": "Abkuerzung im PDF"
+  },
+  "07316000": {
+   "pdfName": "Neustadt (a. d. Weinstr.), Stadt",
+   "amtlich": "Neustadt an der Weinstraße, Stadt",
+   "grund": "Abkuerzung"
+  }
+ },
+ "kreise": {
+  "09181": {
+   "pdfName": "Landsberg a. Lech",
+   "amtlich": "Landsberg am Lech",
+   "grund": "Abkuerzung"
+  },
+  "09373": {
+   "pdfName": "Neumarkt i. d. Oberpfalz",
+   "amtlich": "Neumarkt i.d.OPf.",
+   "grund": "Abkuerzung"
+  },
+  "09575": {
+   "pdfName": "Neustadt/Aisch-Bad Windsheim",
+   "amtlich": "Neustadt a.d.Aisch-Bad Windsheim",
+   "grund": "Abkuerzung"
+  },
+  "09479": {
+   "pdfName": "Wunsiedel im Fichtelgebirge",
+   "amtlich": "Wunsiedel i.Fichtelgebirge",
+   "grund": "Abkuerzung"
+  },
+  "03358": {
+   "pdfName": "Soltau-Fallingbostel (Heidekreis)",
+   "amtlich": "Heidekreis",
+   "grund": "Umbenennung des Landkreises"
+  },
+  "07232": {
+   "pdfName": "Bitburg-Prüm",
+   "amtlich": "Eifelkreis Bitburg-Prüm",
+   "grund": "Namenszusatz nur amtlich"
+  }
+ }
+}

@@ -1,0 +1,379 @@
+/* ===========================================================================
+   EligibilityCheck — Design-Tokens und Utilities
+   Tailwind CSS v4, CSS-first. Kein tailwind.config.js.
+
+   Grundlagen: docs/design-system.md · SPEC.md 6.5.3 (Statusdarstellung)
+               und 6.5.4 (Betragsart steuert die Darstellung)
+
+   Alle Farbwerte sind gegen die Seitenfläche (--color-surface) und gegen
+   Weiß auf WCAG 2.1 AA nachgerechnet. Die Verhältnisse stehen als Kommentar
+   an jedem Wert. Wer hier eine Farbe ändert, rechnet sie neu nach —
+   docs/design-system.md nennt das Verfahren.
+   =========================================================================== */
+
+@import "tailwindcss";
+
+@theme {
+  /* --- Schrift ----------------------------------------------------------
+     Literata für Überschriften: eine Leseschrift, die ruhig wirkt, ohne
+     behördlich zu sein. Source Sans 3 für alles Übrige.                  */
+  --font-sans: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
+  --font-display: Literata, Georgia, "Times New Roman", serif;
+
+  /* --- Schriftgrößen ----------------------------------------------------
+     ACHTUNG: --text-base ist 18px, nicht die Tailwind-Vorgabe 16px.
+     Diese App wird oft auf kleinen, alten Displays und unter Druck
+     gelesen. Die zwei Pixel kosten nichts.                               */
+  --text-xs:   0.8125rem;  /* 13px — nur Metadaten, nie Fließtext         */
+  --text-sm:   0.875rem;   /* 14px — Labels, Pillen                       */
+  --text-md:   0.9375rem;  /* 15px — Hilfetexte                           */
+  --text-base: 1.125rem;   /* 18px — Grundtext der App                    */
+  --text-base--line-height: 1.6;
+  --text-lg:   1.25rem;    /* 20px — Zwischentitel                        */
+  --text-lg--line-height: 1.3;
+  --text-xl:   1.5rem;     /* 24px                                        */
+  --text-xl--line-height: 1.25;
+  --text-2xl:  1.6875rem;  /* 27px — Wizard-Überschrift (Telefon)         */
+  --text-2xl--line-height: 1.25;
+  --text-3xl:  2rem;       /* 32px — Seitenüberschrift                    */
+  --text-3xl--line-height: 1.2;
+  --text-4xl:  2.5rem;     /* 40px — Display                              */
+  --text-4xl--line-height: 1.15;
+
+  /* --- Flächen ---------------------------------------------------------- */
+  --color-surface: #fbfaf7;  /* warmes Off-White, Seitenhintergrund       */
+  --color-card:    #ffffff;
+  --color-muted:   #f5f3ef;  /* ruhige Fläche in Karten                   */
+
+  /* --- Text -------------------------------------------------------------- */
+  --color-ink:      #27221d; /* 15,1:1 auf surface                        */
+  --color-ink-soft: #615953; /*  6,6:1                                    */
+
+  /* --- Linien ------------------------------------------------------------
+     line      = dekorativ, trennt optisch. Kein Kontrastminimum.
+     line-field = Rand bedienbarer Elemente. 3,5:1, WCAG 1.4.11.
+     Ein Eingabefeld bekommt NIE --color-line.                            */
+  --color-line:       #dbd7d0;
+  --color-line-field: #8b857d;
+
+  /* --- Marke -------------------------------------------------------------
+     Warmes Ziegelrot, bewusst weder grün noch amber noch blau: Die Marke
+     darf nicht mit einer Statusbedeutung kollidieren.                    */
+  --color-brand:        #9b462c; /* 6,1:1 · Weiß darauf 6,4:1             */
+  --color-brand-active: #843217; /* 8,2:1                                 */
+
+  /* --- Eingabefehler und unwiderrufliches Löschen ------------------------
+     Kein Prüfergebnis ist rot — „kein Anspruch" ist eine Auskunft.
+     Dieselbe Farbe trägt nur noch .btn-gefahr (Kontolöschung).          */
+  --color-error: #a92227;        /* 6,8:1 · Weiß darauf 7,1:1             */
+  --color-error-active: #8c1b1f; /* Weiß darauf 9,2:1                     */
+
+  /* --- Statusrollen -------------------------------------------------------
+     Vier Rollen für fünf Status. Die Zuordnung hängt nicht nur am Status,
+     sondern bei `nachrangig` auch am Grund — siehe statusRolle() in
+     docs/design-system.md.
+       ja           -> ja
+       vielleicht   -> vielleicht
+       nein         -> neutral
+       nachrangig   -> neutral (Ausschluss) | ja (Vermeidung)
+       nicht_pruefbar -> info
+     Jede Rolle hat drei Werte: Kern (Text/Icon), -soft (Fläche),
+     -line (Rand).                                                       */
+  --color-ja:      #196632;   /* 6,7:1 · Weiß darauf 7,0:1                */
+  --color-ja-soft: #e4f8e7;
+  --color-ja-line: #b3debb;
+
+  --color-vielleicht:      #905d00; /* 5,4:1                              */
+  --color-vielleicht-soft: #ffefd8;
+  --color-vielleicht-line: #efca99;
+
+  --color-neutral:      #5a544f;    /* 7,2:1                              */
+  --color-neutral-soft: #f5f1ee;
+  --color-neutral-line: #d8cfc9;
+
+  --color-info:      #175d9b;       /* 6,5:1                              */
+  --color-info-soft: #e3f4ff;
+  --color-info-line: #b1d5fb;
+
+  /* --- Radien -------------------------------------------------------------
+     Genau zwei plus Pille. Mehr Abstufungen erzeugen nur Unentschiedenheit. */
+  --radius-control: 0.375rem;  /*  6px — Felder, Schaltflächen            */
+  --radius-card:    0.625rem;  /* 10px — Karten, Hinweisblöcke            */
+
+  /* --- Abstände -----------------------------------------------------------
+     --spacing bleibt auf 0.25rem. Die Skala 4/8/12/16/24/32/48 entspricht
+     damit p-1 p-2 p-3 p-4 p-6 p-8 p-12. Kein Grund, sie zu überschreiben. */
+}
+
+/* ===========================================================================
+   Grundlagen
+   =========================================================================== */
+
+@layer base {
+  html {
+    background-color: var(--color-surface);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    /* Zahlen in Beträgen und Tabellen stehen untereinander */
+    font-variant-numeric: tabular-nums lining-nums;
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    text-wrap: balance;
+  }
+
+  p, li {
+    text-wrap: pretty;
+  }
+
+  /* Der Fokusring gilt global, nicht als Opt-in-Klasse.
+     Bewusst dunkel statt in einer Semantikfarbe: Auf dem Primärbutton käme
+     ein Blau auf 1,1–1,2:1 und wäre praktisch unsichtbar. Ein dunkler Ring
+     mit Abstand liegt immer auf der hellen Seitenfläche — dort 15,1:1.
+     Käme je eine dunkle Fläche dazu, bräuchte er einen hellen Innenring. */
+  :focus-visible {
+    outline: 3px solid var(--color-ink);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+
+  /* Wer Bewegung reduziert haben will, bekommt keine. */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* ===========================================================================
+   Utilities
+   =========================================================================== */
+
+/* Mindestgröße jedes Bedienelements. WCAG 2.1 AA verlangt 44px —
+   auf dem Telefon, mit klammen Händen, sind 48 die ehrlichere Zahl. */
+@utility bedienbar {
+  min-height: 3rem;
+  min-width: 3rem;
+}
+
+/* Für Geldbeträge: gleiche Ziffernbreite, keine Mediävalziffern. */
+@utility betrag {
+  font-variant-numeric: tabular-nums lining-nums;
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
+/* Nur für Screenreader — etwa das Wort „Fehler" vor einer Fehlermeldung. */
+@utility nur-vorlesen {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* ===========================================================================
+   Komponenten
+   =========================================================================== */
+
+@layer components {
+
+  /* --- Schaltflächen ----------------------------------------------------- */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: --spacing(2);
+    min-height: 3rem;
+    padding-inline: --spacing(6);
+    padding-block: --spacing(3);
+    border-radius: var(--radius-control);
+    font-size: var(--text-base);
+    font-weight: 600;
+    line-height: 1.2;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 120ms ease, border-color 120ms ease;
+  }
+  a.btn:hover { text-decoration: none; }
+
+  /* Die eine Hauptaktion einer Seite: größer als ein Textlink, damit die
+     Fläche und nicht nur die Farbe die Bedienung trägt. */
+  .btn-gross {
+    min-height: 3.5rem;
+    padding-inline: --spacing(8);
+    font-size: var(--text-lg);
+  }
+  .btn:disabled {
+    background-color: var(--color-line);
+    color: var(--color-ink-soft);
+    border-color: transparent;
+    cursor: not-allowed;
+  }
+
+  /* Genau eine primäre Aktion je Ansicht. Wo zwei gleichwertig aussehen,
+     ist meist eine davon keine.                                          */
+  .btn-primaer {
+    background-color: var(--color-brand);
+    color: #ffffff;
+    border: none;
+  }
+  .btn-primaer:hover:not(:disabled) { background-color: var(--color-brand-active); }
+
+  .btn-sekundaer {
+    background-color: transparent;
+    color: var(--color-brand);
+    border: 2px solid var(--color-brand);
+  }
+  .btn-sekundaer:hover:not(:disabled) {
+    color: var(--color-brand-active);
+    border-color: var(--color-brand-active);
+  }
+
+  .btn-neutral {
+    background-color: transparent;
+    color: var(--color-ink);
+    border: 2px solid var(--color-line-field);
+  }
+  .btn-neutral:hover:not(:disabled) { border-color: var(--color-ink); }
+
+  .btn-gefahr {
+    background-color: var(--color-error);
+    color: #ffffff;
+    border: none;
+  }
+  .btn-gefahr:hover:not(:disabled) { background-color: var(--color-error-active); }
+
+  .loesch-frage {
+    display: flex;
+    flex-direction: column;
+    gap: --spacing(3);
+    padding: --spacing(4);
+    border: 2px solid var(--color-error);
+    border-radius: var(--radius-control);
+    background-color: var(--color-card);
+  }
+
+  /* --- Eingabe ------------------------------------------------------------ */
+  .feld {
+    display: flex;
+    align-items: center;
+    gap: --spacing(2);
+    width: 100%;
+    min-height: 3.25rem;              /* 52px — Eingabe darf größer sein   */
+    padding-inline: --spacing(4);
+    background-color: var(--color-card);
+    border: 2px solid var(--color-line-field);
+    border-radius: var(--radius-control);
+    font-size: 1.1875rem;             /* 19px — Zahlen gut lesbar          */
+    font-weight: 600;
+  }
+  .feld:focus-within { border-color: var(--color-ink); }
+  .feld[data-fehler="true"] { border-color: var(--color-error); }
+
+  .feld-hinweis { font-size: var(--text-md); line-height: 1.5; color: var(--color-ink-soft); }
+  .feld-fehler  { font-size: var(--text-md); line-height: 1.5; color: var(--color-error); font-weight: 600; }
+
+  /* --- Karten ------------------------------------------------------------- */
+  .karte {
+    background-color: var(--color-card);
+    border: 1px solid var(--color-line);
+    border-radius: var(--radius-card);
+    padding: --spacing(6);
+  }
+
+  /* Ergebniskarte. Die Rolle kommt per data-rolle an den Container, damit
+     Fläche, Rand und Farbakzent nicht einzeln gesetzt werden müssen.
+     data-rolle wird aus statusRolle(status, nachrangigGrund) gebildet —
+     siehe docs/design-system.md.                                         */
+  .ergebnis {
+    background-color: var(--color-card);
+    border: 1px solid var(--color-line);
+    border-left: 5px solid var(--color-neutral);
+    border-radius: var(--radius-card);
+    padding: --spacing(6);
+    display: flex;
+    flex-direction: column;
+    gap: --spacing(4);
+  }
+  .ergebnis[data-rolle="ja"]         { border-color: var(--color-ja-line);         border-left-color: var(--color-ja); }
+  .ergebnis[data-rolle="vielleicht"] { border-color: var(--color-vielleicht-line); border-left-color: var(--color-vielleicht); }
+  .ergebnis[data-rolle="neutral"]    { border-color: var(--color-neutral-line);    border-left-color: var(--color-neutral); }
+  .ergebnis[data-rolle="info"]       { border-color: var(--color-info-line);       border-left-color: var(--color-info); }
+
+  /* Statuspille. Trägt IMMER Text — Farbe allein ist kein Zustand.
+     Das Icon steht als eigenes SVG daneben, nicht in dieser Klasse.      */
+  .status-pille {
+    display: inline-flex;
+    align-items: center;
+    padding: --spacing(1) --spacing(3);
+    border-radius: 9999px;
+    font-size: var(--text-sm);
+    font-weight: 600;
+  }
+  .status-pille[data-rolle="ja"]         { background-color: var(--color-ja-soft);         color: var(--color-ja); }
+  .status-pille[data-rolle="vielleicht"] { background-color: var(--color-vielleicht-soft); color: var(--color-vielleicht); }
+  .status-pille[data-rolle="neutral"]    { background-color: var(--color-neutral-soft);    color: var(--color-neutral); }
+  .status-pille[data-rolle="info"]       { background-color: var(--color-info-soft);       color: var(--color-info); }
+
+  /* Der Block für die Handlungsempfehlung. Fester Platz je Status —
+     ohne ihn steht unter einem Ergebnis eine Antragsanleitung für etwas,
+     das gar keinen eigenen Antragsweg hat (SPEC 6.5.3).                  */
+  .naechster-schritt {
+    display: flex;
+    flex-direction: column;
+    gap: --spacing(3);
+    padding: --spacing(5);
+    background-color: var(--color-muted);
+    border-radius: var(--radius-card);
+  }
+  .naechster-schritt > .titel {
+    font-size: var(--text-md);
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--color-ink-soft);
+  }
+
+  /* Pflichtbestandteil JEDER Ergebniskarte, nicht nur der Seite:
+     Karten werden einzeln geteilt und einzeln fotografiert (SPEC 6.5.5). */
+  .ergebnis-fussnote {
+    padding-top: --spacing(3);
+    border-top: 1px solid var(--color-muted);
+    font-size: var(--text-sm);
+    line-height: 1.5;
+    color: var(--color-ink-soft);
+  }
+
+  /* --- Hinweise — drei Sorten, drei Bedeutungen -------------------------- */
+  .hinweis {
+    display: flex;
+    align-items: flex-start;
+    gap: --spacing(3);
+    padding: --spacing(4) --spacing(5);
+    border-radius: var(--radius-card);
+    border: 1px solid transparent;
+    font-size: var(--text-base);
+    line-height: 1.55;
+  }
+  /* Eingabe ist ungewöhnlich, aber erlaubt — Rückfrage, keine Ablehnung.
+     Entspricht den Plausibilitätswarnungen aus SPEC 8.2.                 */
+  .hinweis-rueckfrage { background-color: var(--color-vielleicht-soft); border-color: var(--color-vielleicht-line); }
+  /* Erklärung, warum wir etwas fragen. Nie eine Aufforderung.            */
+  .hinweis-erklaerung { background-color: var(--color-info-soft); border-color: var(--color-info-line); }
+  /* Die einzige Stelle mit Rot. Nennt, was zu tun ist — und NIE den
+     eingegebenen Wert: Fehlertexte landen in Protokollen (SPEC 9.3).     */
+  .hinweis-fehler { background-color: var(--color-card); border-color: var(--color-line); border-left: 4px solid var(--color-error); }
+
+  /* --- Fortschritt im Wizard --------------------------------------------- */
+  .fortschritt { display: flex; gap: --spacing(1.5); }
+  .fortschritt > span { flex: 1 1 0; height: 6px; border-radius: 9999px; background-color: var(--color-line); }
+  .fortschritt > span[data-erledigt="true"] { background-color: var(--color-brand); }
+}
